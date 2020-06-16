@@ -1,0 +1,11 @@
+img{
+    background-color: bisque;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.annonceElt{
+    border-style: solid;
+    border-width: 10px;
+    background-color: teal;
+}

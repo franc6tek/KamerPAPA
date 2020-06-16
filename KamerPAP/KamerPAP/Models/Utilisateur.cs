@@ -11,7 +11,9 @@ namespace KamerPAP.Models
 
         public string Email{get;set;}
 
-        public string PassWord { get; set; }
+        public string MotDePasse { get; set; }
+
+        public DateTime DateCreation { get; set; }
 
         public string NomUtilisateur { get; set; }
 
