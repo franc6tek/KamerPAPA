@@ -10,10 +10,12 @@ import { IdentificationComponent } from './identification/identification.compone
 import { AnnoncesViewComponent } from './annonces-view/annonces-view.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CreerAnnonceComponent } from './creer-annonce/creer-annonce.component';
+import { VisualiserAnnonceComponent } from './visualiser-annonce/visualiser-annonce.component';
 
 const appRoutes: Routes = [
   { path: 'annonces', component: AnnoncesViewComponent},
   { path: 'creerAnnonce', component: CreerAnnonceComponent},
+  { path: 'visualiserAnnonce', component: VisualiserAnnonceComponent},
   { path: 'auth/identification', component: IdentificationComponent},
   { path: 'auth/inscription', component: InscriptionComponent},
   { path: '', component: AnnoncesViewComponent},
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     InscriptionComponent,
     IdentificationComponent,
     AnnoncesViewComponent,
-    CreerAnnonceComponent
+    CreerAnnonceComponent,
+    VisualiserAnnonceComponent
   ],
   imports: [
     BrowserModule,
