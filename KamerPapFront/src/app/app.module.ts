@@ -11,11 +11,14 @@ import { AnnoncesViewComponent } from './annonces-view/annonces-view.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CreerAnnonceComponent } from './creer-annonce/creer-annonce.component';
 import { VisualiserAnnonceComponent } from './visualiser-annonce/visualiser-annonce.component';
+import { AnnonceService } from './services/annonce.service';
+import { AuthGardService } from './services/auth-gard.service';
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   { path: 'annonces', component: AnnoncesViewComponent},
   { path: 'creerAnnonce', component: CreerAnnonceComponent},
-  { path: 'visualiserAnnonce', component: VisualiserAnnonceComponent},
+  { path: 'visualiserAnnonce/:id', component: VisualiserAnnonceComponent},
   { path: 'auth/identification', component: IdentificationComponent},
   { path: 'auth/inscription', component: InscriptionComponent},
   { path: '', component: AnnoncesViewComponent},
@@ -38,7 +41,11 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AnnonceService,
+    AuthGardService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
