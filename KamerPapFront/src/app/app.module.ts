@@ -9,9 +9,11 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { IdentificationComponent } from './identification/identification.component';
 import { AnnoncesViewComponent } from './annonces-view/annonces-view.component';
 import { Routes, RouterModule } from '@angular/router';
+import { CreerAnnonceComponent } from './creer-annonce/creer-annonce.component';
 
 const appRoutes: Routes = [
   { path: 'annonces', component: AnnoncesViewComponent},
+  { path: 'creerAnnonce', component: CreerAnnonceComponent},
   { path: 'auth/identification', component: IdentificationComponent},
   { path: 'auth/inscription', component: InscriptionComponent},
   { path: '', component: AnnoncesViewComponent},
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     InscriptionComponent,
     IdentificationComponent,
-    AnnoncesViewComponent
+    AnnoncesViewComponent,
+    CreerAnnonceComponent
   ],
   imports: [
     BrowserModule,
