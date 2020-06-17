@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="passWord">Mot de passe</label>
-                <input type="text" id="passWord" class="form-control" formControlName="passWord">
+                <input type="password" id="passWord" class="form-control" formControlName="passWord">
             </div>
             <button class="btn btn-success" type="submit" [disabled]="inscriptionForm.invalid">Créer mon compte</button>
             <p class="text-danger">{{errorMessage}}</p>
