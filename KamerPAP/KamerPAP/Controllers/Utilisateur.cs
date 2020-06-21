@@ -12,16 +12,16 @@ using Tools;
 
 namespace KamerPAP.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class WebApiController : ControllerBase
+    public class Utilisateur : ControllerBase
     {
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Utilisateur>>> GetUtilisateur()
+        public async Task<ActionResult<IEnumerable<Models.Utilisateur>>> GetUtilisateur()
         {
             string ConnectionString = ConfigurationManager.GetAppSettings("ConnectionString");
-            List<Utilisateur> utilisateurs = new List<Utilisateur>();
+            List<Models.Utilisateur> utilisateurs = new List<Models.Utilisateur>();
 
             using (SqlConnection sqlconn = new SqlConnection(ConnectionString))
             {
@@ -31,7 +31,7 @@ namespace KamerPAP.Controllers
                 SqlDataReader sdr = sqlComm.ExecuteReader();
                 while(sdr.Read())
                 {
-                    utilisateurs.Add(new Utilisateur()
+                    utilisateurs.Add(new Models.Utilisateur()
                     {
                         Id = Convert.ToInt32(sdr.GetValue(0)),
                         Email = sdr.GetValue(1).ToString(),
