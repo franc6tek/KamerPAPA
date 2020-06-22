@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-        <h2>Inscription</h2>
+        <h2>Inscrivez vous ici</h2>
         <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="nomUtilisateur">Nom Utilisateur</label>
@@ -14,7 +14,10 @@
                 <label for="passWord">Mot de passe</label>
                 <input type="password" id="passWord" class="form-control" formControlName="passWord">
             </div>
-            <button class="btn btn-success" type="submit" [disabled]="inscriptionForm.invalid">Créer mon compte</button>
+            <div>
+                <button class="btn btn-success" type="submit" [disabled]="inscriptionForm.invalid">Créer mon compte</button>
+                <button type="reset" (click)="onBackToAnnonces()" class="btn btn-danger" style="float: right;">Annuler</button>
+            </div>
             <p class="text-danger">{{errorMessage}}</p>
         </form>
     </div>

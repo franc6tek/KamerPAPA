@@ -10,6 +10,7 @@ export class AuthService {
   createNouveauUtilisateur(email: string, passWord: string, NomUtilisateur: string){
     return true;
   }
+  
 
   identification(identifiant: string, passWord: string){
 

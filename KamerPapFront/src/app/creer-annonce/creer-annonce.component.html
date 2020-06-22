@@ -1,1 +1,32 @@
-<p>creer-annonce works!</p>
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <h2>Créez votre annonce ici</h2>
+        <form [formGroup]="creerAnnonceForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="titre">Titre</label>
+                <input type="text" id="titre" class="form-control" formControlName="titre">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" class="form-control" formControlName="description">
+            </div>
+            <div class="form-group">
+                <label for="prix">Prix</label>
+                <input type="text" id="prix" class="form-control" formControlName="prix">
+            </div>
+            <div class="form-group">
+                <label for="select">Ville : </label>
+                <select id="select" class="form-control" formControlName="ville">
+                    <option>Yaoundé</option>
+                    <option>Douala</option>
+                    <option>Dschang</option>
+                </select>
+            </div>
+            <div>
+                <button class="btn btn-success" type="submit" [disabled]="creerAnnonceForm.invalid">Valider</button>
+                <button type="reset" (click)="onBackToAnnonces()" class="btn btn-danger" style="float: right;">Annuler</button>
+            </div>
+            <p class="text-danger">{{errorMessage}}</p>
+        </form>
+    </div>
+</div>

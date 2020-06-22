@@ -13,7 +13,7 @@ export class AnnoncesViewComponent implements OnInit {
   constructor(private annonceService: AnnonceService) { }
 
   ngOnInit(): void {
-    this.annonces = this.annonceService.Annonces;
+    this.annonces = this.annonceService.getAnnonces();
   }
 
 }

@@ -36,4 +36,9 @@ export class IdentificationComponent implements OnInit {
     this.authService.identification(email, passWord);
     this.router.navigate(['creerAnnonce']);
   }
+
+  onBackToAnnonces() {
+    this.initForm();
+    this.router.navigate(['']);
+  }
 }

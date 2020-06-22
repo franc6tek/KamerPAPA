@@ -28,4 +28,8 @@ export class AnnonceService {
   ];
 
   constructor() { }
+
+  getAnnonces(){
+    return this.Annonces;
+  }
 }

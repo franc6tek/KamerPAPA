@@ -56,7 +56,7 @@
                     <h3>Titre {{annonce.Titre}}</h3>
                     <h4>Prix : {{annonce.Prix}}</h4>
                     <h5>Ville : {{annonce.Ville}}</h5>
-                    <h5>Date de création : {{annonce.DateCreation}}</h5>
+                    <h5>Date de création : {{annonce.DateCreation | date: 'short'}}</h5>
                     <button class="btn btn-success">Plus de détails</button>
                 </div>
             </div>
