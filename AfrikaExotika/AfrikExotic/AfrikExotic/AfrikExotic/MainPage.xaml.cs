@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AfrikExotic.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace AfrikExotic
     {
         public MainPage()
         {
+            BindingContext = new MainViewModel();
             InitializeComponent();
         }
     }

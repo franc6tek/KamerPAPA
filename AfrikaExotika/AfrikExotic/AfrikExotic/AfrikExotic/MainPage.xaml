@@ -4,13 +4,95 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:local="clr-namespace:AfrikExotic.Tools"
              x:Class="AfrikExotic.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="BorderWidth" Value="0" />
+            <Setter Property="BackgroundColor" Value="BurlyWood" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--Titre-->
+        <Label Grid.Row="0" Text="AFIKAEXOTIKA" FontFamily="ThemeFont" FontSize="50" 
+               HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black"/>
+        <!-- séparateur-->
+        <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="BurlyWood" />
+        <!-- Menu Horizontal -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="&#xf2f6;"  FontSize="50"
+                VerticalOptions="Center" HorizontalOptions="Start"
+                FontFamily="{StaticResource FontAwesomeSolid}" />
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+            <StackLayout Grid.Column="3" Orientation="Horizontal" HeightRequest="20" 
+                         HorizontalOptions="End">
+                <Label HorizontalOptions="Center"
+                   Text="&#xf07a;"  FontSize="50"
+                FontFamily="{StaticResource FontAwesomeSolid}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="2" FontSize="25"
+                       VerticalTextAlignment="Start" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </Grid>
+        <!-- séparateur -->
+        <BoxView Grid.Row="3" HeightRequest="1" BackgroundColor="BurlyWood" />
+        <StackLayout Grid.Row="4">
+            <CollectionView ItemsSource="{Binding Articles}" VerticalScrollBarVisibility="Always">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2" Source="{local:ImageResource AfrikExotic.Images.product.png}" 
+                                   Aspect="AspectFill" HeightRequest="100" WidthRequest="60" />
+                            <StackLayout Grid.Column="1" Orientation="Vertical">
+                                <Label Text="{Binding NomArticle}" FontAttributes="Bold" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Prix : " FontAttributes="Italic"/>
+                                    <Label Text="{Binding Prix}" FontAttributes="Italic"/>
+                                    <Label Text="€" FontAttributes="Italic"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+                                <Label Text="{Binding Description}" FontAttributes="Italic"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Stepper x:Name="stepper" Minimum="1" Increment="1" HorizontalOptions="Start" HeightRequest="40"/>
+                                    <Label Text="{Binding Source={x:Reference stepper}, Path=Value}" 
+                                       HorizontalOptions="Start" VerticalOptions="CenterAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+                            <Button Grid.Row="2" Grid.Column="0" Text="Acheter"/>
+                            <Button Grid.Row="2" Grid.Column="1" Text="Ajouter au panier"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>

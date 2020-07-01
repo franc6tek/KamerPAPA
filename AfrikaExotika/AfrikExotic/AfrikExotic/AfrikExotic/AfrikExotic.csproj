@@ -11,13 +11,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Plantain.png" />
+    <None Remove="Images\product.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Plantain.png" />
+    <EmbeddedResource Include="Images\product.png" />
   </ItemGroup>
 </Project>
