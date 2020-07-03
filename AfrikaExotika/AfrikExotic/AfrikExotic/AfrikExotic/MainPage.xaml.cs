@@ -1,4 +1,5 @@
 ﻿using AfrikExotic.ViewModels;
+using AfrikExotic.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,16 @@ namespace AfrikExotic
         {
             BindingContext = new MainViewModel();
             InitializeComponent();
+        }
+
+        async void OnSignInOutClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignInPage(new SignInViewModel()));
+        }
+
+        private void OnOpenChariotPageClicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

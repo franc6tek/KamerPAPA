@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "418331540932",
+    "firebase_url": "https://afrikaexotik.firebaseio.com",
+    "project_id": "afrikaexotik",
+    "storage_bucket": "afrikaexotik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418331540932:android:a339142601d2edbcf23891",
+        "android_client_info": {
+          "package_name": "com.companyname.afrikexotic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418331540932-4uevni5c04s6p56jv9ev8u4athmn7p2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1QPNhDJF4_d-CF9KKwiRjzk08XyP1nqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418331540932-4uevni5c04s6p56jv9ev8u4athmn7p2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

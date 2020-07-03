@@ -32,11 +32,11 @@ namespace AfrikExotic.ViewModels
             }
         }
 
-        public ICommand ForgotPasswordCommand { get; set; }
+        public ICommand SignInCommand { get; set; }
 
         public MainViewModel()
         {
-            ForgotPasswordCommand = new RelayCommand(ExecuteMyCommand);
+            SignInCommand = new RelayCommand(ExecuteSignInCommand);
             this.articles = new List<Article>
             {
                 new Article{NomArticle = "Plantain", Categorie = "Alimentaire",
@@ -52,7 +52,7 @@ namespace AfrikExotic.ViewModels
 
         }
 
-        private void ExecuteMyCommand()
+        private void ExecuteSignInCommand()
         {
           
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AfrikExotic.Models
 {
-    public class Client
+    public class Utilisateur
     {
         private Guid idClient;
         public Guid IdClient

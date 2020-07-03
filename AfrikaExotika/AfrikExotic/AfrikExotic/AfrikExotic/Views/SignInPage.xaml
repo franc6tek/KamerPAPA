@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AfrikExotic.Views.SignInPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="loginStackLayout"
+             VerticalOptions="Center"
+             IsVisible="True">
+                <Entry Placeholder="Email"
+           Keyboard="Email" Text="{Binding Email}"/>
+                <Entry Placeholder="Password"
+           IsPassword="True" Text="{Binding Password}"/>
+                <Button Text="Login" Command="{Binding LoginCommand}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Don't have an account?"/>
+                    <Label Text="Register">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RegisterLabel_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout x:Name="registerStackLayout"
+             VerticalOptions="Center"
+             IsVisible="False">
+                <Entry Placeholder="Name" Text="{Binding NomUtilisateur}"/>
+                <Entry Placeholder="Adresse" Text="{Binding Adresse}"/>
+                <Entry Placeholder="CodePostal" Text="{Binding CodePostal}" MaxLength="5"/>
+                <Entry Placeholder="Phone" Text="{Binding Phone}" Keyboard="Telephone" MaxLength="10"/>
+                <Entry Placeholder="Email" Keyboard="Email" Text="{Binding Email}"/>
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+                <Entry Placeholder="Confirm password" IsPassword="True" Text="{Binding ConfirmPassword}"/>
+                <Button Text="Register" Command="{Binding RegisterCommand}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Already have an account?"/>
+                    <Label Text="Login">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LoginLabel_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

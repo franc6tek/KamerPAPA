@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>418331540932-2uin5lakkjrbhpkj3mnhvih3i3nhm04k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.418331540932-2uin5lakkjrbhpkj3mnhvih3i3nhm04k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDcH1JuxZo7HkzDUAAEKn-O_4YsnwKJCow</string>
+	<key>GCM_SENDER_ID</key>
+	<string>418331540932</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.companyname.AfrikExotic</string>
+	<key>PROJECT_ID</key>
+	<string>afrikaexotik</string>
+	<key>STORAGE_BUCKET</key>
+	<string>afrikaexotik.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:418331540932:ios:e5c79c919820084df23891</string>
+	<key>DATABASE_URL</key>
+	<string>https://afrikaexotik.firebaseio.com</string>
+</dict>
+</plist>

@@ -35,17 +35,22 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <!--SignIn/SignOut-->
             <Label Grid.Column="0" Text="&#xf2f6;"  FontSize="50"
                 VerticalOptions="Center" HorizontalOptions="Start"
-                FontFamily="{StaticResource FontAwesomeSolid}" />
-
+                FontFamily="{StaticResource FontAwesomeSolid}" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSignInOutClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <!--Chariot-->
             <StackLayout Grid.Column="3" Orientation="Horizontal" HeightRequest="20" 
                          HorizontalOptions="End">
                 <Label HorizontalOptions="Center"
                    Text="&#xf07a;"  FontSize="50"
                 FontFamily="{StaticResource FontAwesomeSolid}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}" />
+                        <TapGestureRecognizer Tapped="OnOpenChariotPageClicked"/>
                     </Label.GestureRecognizers>
                 </Label>
                 <Label Text="2" FontSize="25"
